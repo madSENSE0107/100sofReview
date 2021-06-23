@@ -22,13 +22,13 @@ export default function Layout({ children }) {
       <footer className="pt-8">
         <p className="text-xl font-semibold pb-3">Suggestions !</p>
         <div className="pb-3">
-          By default, Tailwind provides three font family utilities: 
-          a cross-browser sans-serif stack, a cross-browser serif stack, 
+          Suggest me features or movies to watch 
+          by connecting with me through these socials 
         </div>
              <ul className="mb-4">
-                <li className="pb-3"><a className="hover:text-gray-500 border-2 border-black p-1 " href="https://github.com/madSENSE0107">Github</a></li>
-                <li className="pb-3"><a className="hover:text-gray-500 border-2 border-black p-1 " href="https://www.linkedin.com/in/saptarsi-chakrabarty/">Linkedin</a></li>
-                <li className="pb-3"><a className="hover:text-gray-500 border-2 border-black p-1 " href="https://mail.google.com/mail/?view=cm&fs=1&to=saptarsi2000@google.com">Mail</a></li>
+                <li className="pb-3"><a className="hover:text-gray-500 bg-black text-gray-50 p-1 rounded-md" href="https://github.com/madSENSE0107">Github</a></li>
+                <li className="pb-3"><a className="hover:text-gray-500 bg-black text-gray-50 p-1 rounded-md" href="https://www.linkedin.com/in/saptarsi-chakrabarty/">Linkedin</a></li>
+                <li className="pb-3"><a className="hover:text-gray-500 bg-black text-gray-50 p-1 rounded-md" href="https://mail.google.com/mail/?view=cm&fs=1&to=saptarsi2000@google.com">Mail</a></li>
             </ul>
       </footer>
     </div>

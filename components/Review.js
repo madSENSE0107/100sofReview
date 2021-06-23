@@ -10,7 +10,7 @@ export default function Review({r}){
             <div>{title}</div>
             {/* <div>{date}</div> */}
             <Link href={"/reviews/"+slug}>
-                <a className="border-2 border-black rounded-md p-1">read</a>
+                <a className="bg-black text-gray-50 rounded-md p-1">read</a>
             </Link>
         </div>
         

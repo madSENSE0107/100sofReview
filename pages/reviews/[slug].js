@@ -30,14 +30,17 @@ export async function getStaticProps({params}) {
     "fields.slug":params.slug
   })
   return {
-    props:{review:items[0]}  
+    props:{
+      review:items[0],
+      revalidate:10
+    }  
   }
 
 }
 export default function FullReview({review}) {
   // console.log(review)
   const { dateOfRelease, title, director, iMdB, poster, reviewmovie} = review.fields
-  console.log(poster)
+  // console.log(poster)
 
     return (
       <div>
@@ -69,7 +72,7 @@ export default function FullReview({review}) {
           <div> 
           <Link href="/">
           <a>
-           <div className=" text-center flex justify-center gap-3 border-2 border-black rounded-md mx-24">
+           <div className=" text-center flex justify-center  bg-black text-gray-50 rounded-md mt-3 mx-32">
               go back and read more !!
            </div>
           </a>

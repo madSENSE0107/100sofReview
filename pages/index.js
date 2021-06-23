@@ -12,7 +12,8 @@ export async function getStaticProps() {
   const res =await client.getEntries({content_type:"review"})
   return {
     props:{
-      reviews:res.items
+      reviews:res.items,
+      revalidate:10
     }
   }
 }
@@ -26,9 +27,10 @@ export default function Reviews({reviews}) {
       <div className="pb-6">
       By default, Tailwind provides three font family utilities: 
       a cross-browser sans-serif stack, a cross-browser serif stack, 
+      (this is just a sample text)
       </div>
       
-      <div className="text-xl font-semibold pb-3">Blog List</div>
+      <div className="text-xl font-semibold pb-3">Review List</div>
       <div className="border-2 border-gray-900 rounded-lg">
         {reviews.map(r=>(
           <Review key={r.sys.id} r={r} />
