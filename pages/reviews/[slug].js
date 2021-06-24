@@ -18,7 +18,7 @@ export const getStaticPaths=async()=>{
   })
   return{
     paths:paths,
-    fallback:false
+    fallback:true
   }
 } 
 
@@ -32,8 +32,9 @@ export async function getStaticProps({params}) {
   return {
     props:{
       review:items[0],
-      revalidate:10
-    }  
+     
+    },
+    revalidate:10
   }
 
 }
@@ -41,6 +42,7 @@ export default function FullReview({review}) {
   // console.log(review)
   const { dateOfRelease, title, director, iMdB, poster, reviewmovie} = review.fields
   // console.log(poster)
+    if(!review)<div>Loading ....</div>
 
     return (
       <div>
