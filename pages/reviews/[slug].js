@@ -40,10 +40,11 @@ export async function getStaticProps({params}) {
 }
 export default function FullReview({review}) {
   // console.log(review)
+  if(!review) return <div>Loading ....</div>
+
   const { dateOfRelease, title, director, iMdB, poster, reviewmovie} = review.fields
   // console.log(poster)
-    if(!review)<div>Loading ....</div>
-
+   
     return (
       <div>
         <div className="grid justify-items-center text-xl font-semibold pb-3">Review in 100s</div>
