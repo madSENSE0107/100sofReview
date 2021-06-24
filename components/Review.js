@@ -6,7 +6,7 @@ export default function Review({r}){
 
     return(
         
-        <div className="m-2 p-2 ">
+        <div className="m-1 p-2 ">
             <div>{title}</div>
             {/* <div>{date}</div> */}
             <Link href={"/reviews/"+slug}>

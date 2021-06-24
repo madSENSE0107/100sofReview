@@ -13,8 +13,9 @@ export async function getStaticProps() {
   return {
     props:{
       reviews:res.items,
-      revalidate:10
-    }
+      
+    },
+    revalidate:10
   }
 }
 
@@ -24,14 +25,15 @@ export default function Reviews({reviews}) {
   return (
     
       <div >
-      <div className="pb-6">
-      By default, Tailwind provides three font family utilities: 
-      a cross-browser sans-serif stack, a cross-browser serif stack, 
-      (this is just a sample text)
+      <div className="pb-6 ">
+      This is a project website made in NEXT.js using Contentful CMS.
+      If there are any bugs or any new feature that you want to add into this 
+      OR you simply want to connect , my socials are given below !
+      
       </div>
       
       <div className="text-xl font-semibold pb-3">Review List</div>
-      <div className="border-2 border-gray-900 rounded-lg">
+      <div className="border-2 border-gray-900 rounded-lg h-64 scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-gray-100 overflow-auto">
         {reviews.map(r=>(
           <Review key={r.sys.id} r={r} />
         ))}

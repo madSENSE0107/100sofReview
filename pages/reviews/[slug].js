@@ -48,7 +48,7 @@ export default function FullReview({review}) {
     return (
       <div>
         <div className="grid justify-items-center text-xl font-semibold pb-3">Review in 100s</div>
-        <div>
+        <div className="flex justify-center">
         
         <Image 
           src={'https:' + poster.fields.file.url}
