@@ -1,35 +1,41 @@
 import Link from 'next/link'
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 export default function Layout({ children }) {
   return (
-    <div className="font-sans  m-4 p-4 md:mx-12 md:px-36 lg:mx-56 lg:px-56 flex flex-col md:justify-center">
-      <header className="flex justify-center">
-        <Link href="/">
-          <a>
-            <h1 className="flex flex-col">
-              <span className="text-5xl font-semibold">100s</span>
-              <span className="text-2xl ">of Review</span>
-            </h1> 
-            
-          </a>
-        </Link>
-      </header>
+    <div className=" font-sans m-4 md:mx-36 flex flex-col md:flex-row md:justify-between ">
+      <div className='md:w-4/6'>
+        <header className="flex justify-start">
+          <Link href="/">
+            <a>
+              <h1 className="mt-4 flex flex-col">
+                <span className="text-xl bg-gradient-to-r from-red-500 to-indigo-900 rounded text-white  p-2 font-semibold">100s</span>
+              </h1>
 
-      <div className="pt-5">
-        { children }
-      </div>
+            </a>
+          </Link>
+        </header>
 
-      <footer className="pt-8">
-        <p className="text-xl font-semibold pb-3">Suggestions !</p>
-        <div className="pb-3">
-          Suggest me features or movies to watch 
-          by connecting with me through these socials 
+        <div className="pt-5">
+          {children}
         </div>
-             <ul className="mb-4">
-                <li className="pb-3"><a className="hover:text-gray-500 bg-black text-gray-50 p-1 rounded-md" href="https://github.com/madSENSE0107">Github</a></li>
-                <li className="pb-3"><a className="hover:text-gray-500 bg-black text-gray-50 p-1 rounded-md" href="https://www.linkedin.com/in/saptarsi-chakrabarty/">Linkedin</a></li>
-                <li className="pb-3"><a className="hover:text-gray-500 bg-black text-gray-50 p-1 rounded-md" href="https://mail.google.com/mail/?view=cm&fs=1&to=saptarsi2000@google.com">Mail</a></li>
-            </ul>
+
+      </div>
+      <footer className="md:w-1/5 md:mt-32 md:flex md:justify-start md:flex-col pt-8">
+        <p className="mt-8 mb-3 text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-red-500 to-slate-800">Suggestions !</p>
+        <div className="mb-8">
+          Suggest me features or movies to watch
+          by connecting with me through these socials.
+          This is a project I made just for fun.TechStack used in this are NEXT.JS ,TailwindCSS And ContenfulCMS.
+          Icons are from react-icon library package.
+        </div>
+        <ul className="mb-4 flex flex-row">
+          <li className="mr-3 "><a className="" href="https://github.com/madSENSE0107"><FaGithub className="text-black text-3xl" /></a></li>
+          <li className="mr-3 "><a className="" href="https://www.linkedin.com/in/saptarsi-chakrabarty/"><FaLinkedin className="text-blue-500 text-3xl" /></a></li>
+          <li className="mr-3 "><a className="" href="https://mail.google.com/mail/?view=cm&fs=1&to=saptarsi2000@google.com"><MdEmail className="text-red-500 text-3xl" /></a></li>
+        </ul>
+        <div>Should have added one copyright text</div>
       </footer>
     </div>
   )
