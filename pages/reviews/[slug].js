@@ -43,8 +43,7 @@ export default function FullReview({ review }) {
   // console.log(review)
   if (!review) return <div>Loading ....</div>
 
-  const { dateOfRelease, title, director, iMdB, poster, reviewmovie } = review.fields
-  // console.log(poster)
+  const { dateOfRelease, title, director, iMdB, poster, reviewmovie,trailerLink,watchTime } = review.fields
   const posterUrl = "https:" + poster.fields.file.url
 
   return (
@@ -71,8 +70,8 @@ export default function FullReview({ review }) {
         </p>
         <span className=" text-red-600 font-bold">IMDb -{iMdB}</span>
         <br />
-        <button className="p-2 bg-slate-800 text-slate-200 rounded-md mr-2  "><FaPlay className="text-blue-100 text-base mr-2" /> Trailer</button>
-        <span>180 mins</span>
+        <button className="p-2 bg-slate-800 text-slate-200 rounded-md mr-2  "><FaPlay className="text-blue-100 text-base mr-2" /> <a href={trailerLink}>Trailer</a></button>
+        <span>{watchTime} mins</span>
         <div>
           {documentToReactComponents(reviewmovie)}
         </div>

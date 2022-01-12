@@ -35,7 +35,6 @@ export default function Layout({ children }) {
           <li className="mr-3 "><a className="" href="https://www.linkedin.com/in/saptarsi-chakrabarty/"><FaLinkedin className="text-blue-500 text-3xl" /></a></li>
           <li className="mr-3 "><a className="" href="https://mail.google.com/mail/?view=cm&fs=1&to=saptarsi2000@google.com"><MdEmail className="text-red-500 text-3xl" /></a></li>
         </ul>
-        <div>Should have added one copyright text</div>
       </footer>
     </div>
   )

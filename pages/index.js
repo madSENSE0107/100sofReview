@@ -33,7 +33,7 @@ export default function Reviews({ reviews }) {
       <div className="mt-8 mb-2 text-5xl font-bold md:text-7xl">
        <span className=" font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-red-500 to-indigo-900">REVIEW</span>  IN 100 SECONDS
       </div>
-      <div className="">Yes thats it. I watch movies a lot and feel strongly about not wasting someones time. 100 seconds are enough to give someone an idea. Ofcourse it is a parody 
+      <div className="">Yes thats it. I watch movies(*anime included) a lot and feel strongly about not wasting someones time. 100 seconds are enough to give someone an idea. Ofcourse it is a parody 
       website and opinions might differ</div>
       <div className="mt-8 text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-red-500 to-blue-800">Reviews</div>
 
@@ -45,9 +45,9 @@ export default function Reviews({ reviews }) {
         className="border-2 border-stone-800 w-full md:w-3/6 p-2 rounded-3xl active:border-yellow-300"
       />
       
-      <div className="flex flex-col justify-center items-center md:flex md:flex-row md:flex-wrap md:justify-start md:mb-28">
+      <div  className="flex flex-col justify-center items-center md:flex md:flex-row md:flex-wrap md:justify-start md:mb-28">
         {filteredReviews.map(r => (
-          <Review key={r.sys.id} r={r} />
+          <Review  key={r.sys.id} r={r} />
         ))}
       </div>
     </div>
